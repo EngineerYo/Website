@@ -1,0 +1,51 @@
+.counter {
+	font-size: 3vw;
+
+	height: 100%;
+	width: 100%;
+
+	text-align: center;
+	align-content: center;
+
+	color: white;
+
+	-webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1.0));
+	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1.0));
+}
+
+.divGrid {
+	position: absolute;
+
+	height: 100%;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 10% 20% 20% 20% 20% 10%;
+	grid-template-rows: 40% 10% 35% 5%;
+}
+
+img {
+	position: absolute;
+	filter: blur(4px);
+
+	display: block;
+
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.spacer {
+	grid-column-start: 1;
+	grid-column-end: 7;
+}
+.small-spacer {
+	grid-column-start: 1;
+	grid-column-end: 6;
+}
+
+html, body {
+	margin: 0px;
+	height: 100%;
+	overflow: hidden;
+}
