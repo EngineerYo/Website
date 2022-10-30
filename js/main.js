@@ -3,7 +3,10 @@ let main = function() {
 	buttons.each(function(i) {
 		let node = $(this)
 		node.click(function() {
-			window.location.href = `../${node.attr('id')}`
+			let windowLocation = `html/${node.attr('id')}.html`
+			// console.log(windowLocation)
+			window.location.href = windowLocation
+
 		})
 	})
 }
