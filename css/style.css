@@ -1,3 +1,9 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+	overflow: hidden;
+}
+
 .divGrid {
 	position: absolute;
 
@@ -5,33 +11,41 @@
 	width: 100%;
 
 	display: grid;
-	grid-template-columns: 20% 60% 20%;
-	grid-template-rows: 20% 20% 20% 20% 20%;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(auto-fill, 10%);
 	align-items: center;
 }
 
 button {
-	grid-column: 2;
+	height: 100%;
 
 	text-align: center;
-	font-size: 40px;
-	color: grey;
-	letter-spacing: 10px;
+	font-size: 60px;
+	color: white;
+	-webkit-text-stroke: 2px black;
+	letter-spacing: 20px;
+	font-weight: bolder;
 
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	
-	background: none;
 	border: none;
 }
 
 button:hover {
-	background: #EEEEEE;
+	
 }
 
-html, body {
-	margin: 0px;
-	height: 100%;
-	overflow: hidden;
+
+#roulette {
+	background: url("../ex/roulettePreview.png");
+	background-position: center;
+	background-size: 100%;
+
+}
+#countdown {
+	background: url("../ex/countdownPreview.png");
+	background-position: 50% 80%;
+	background-size: 100%;
 }

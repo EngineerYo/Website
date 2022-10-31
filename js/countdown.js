@@ -1,9 +1,9 @@
 let getDeltaTime = function() {
-	let startTime = new Date(2022, 9, 11, 20)
-	let endTime =	new Date(2022, 9, 30, 17)
+	let startTime = new Date(2022, 9, 31, 2)
+	let endTime =	new Date(2022, 10, 4, 20)
 	let duration = endTime - startTime
 
-	let scaleFactor = (180 * 365 * 24 * 60 * 60 * 1000) / duration
+	let scaleFactor = (50 * 365 * 24 * 60 * 60 * 1000) / duration
 
 	let nowTime = new Date()
 	let timeRemaining = endTime - nowTime
