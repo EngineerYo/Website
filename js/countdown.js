@@ -1,16 +1,39 @@
+let dates = [
+	{	// Bal lesson + people watching at the Santa Fe
+		start: 	new Date(2022, 9, 19, 19),
+		end: 	new Date(2022, 9, 20, 1)
+	},
+	{	// Dinner & drive in
+		start:	new Date(2022, 9, 30, 19),
+		end:	new Date(2022, 9, 31, 1)
+	}
+]
+
+// Check if between dates, and whether or not we're in the same spot?
+let gaps = [
+	{
+		start:	new Date(2022, 9, 20, 1),
+		end:	new Date(2022, 9, 30, 19)
+	},
+	{
+		start: 	new Date(2022, 9, 31, 2),
+		end:	new Date(2022, 10, 4, 20)
+	}
+]
+
 let getDeltaTime = function() {
-	let startTime = new Date(2022, 9, 31, 2)
-	let endTime =	new Date(2022, 10, 4, 20)
+	let startTime = new Date(2022, 10, 10, 2)
+	let endTime =	new Date(2022, 11, 2, 20)
 	let duration = endTime - startTime
 
-	let scaleFactor = (50 * 365 * 24 * 60 * 60 * 1000) / duration
+	let scaleFactor = (180 * 365 * 24 * 60 * 60 * 1000) / duration
 
 	let nowTime = new Date()
 	let timeRemaining = endTime - nowTime
 
 	let {hours, days, months, years} = unixDuration(timeRemaining*scaleFactor)
 
-	if (endTime < nowTime) {
+	if (endTime < nowTime || nowTime < startTime) {
 		$('.counter#years').text(`0 years`)
 		$('.counter#months').text(`0 months`)
 		$('.counter#days').text(`0 days`)

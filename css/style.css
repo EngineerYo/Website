@@ -1,29 +1,92 @@
+* {
+	transition: 0.3s;
+}
+*::-webkit-scrollbar {
+	display: none;
+}
+
 html, body {
 	margin: 0px;
+}
+
+body {
+	padding: 1vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background-color: #121212;
+}
+
+.main_page {
+	width: 90vw;
 	height: 100%;
+
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 10% 90%;
+
+}
+
+.top_navbar {
+	width: 100%;
+	height: 100%;
+
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows:	50% 50%;
+
+	border-bottom: 2px lightslategrey;
+
 	overflow: hidden;
 }
 
-.divGrid {
-	position: absolute;
+.themes {
+	width: 100%;
+	height: 100%;
 
+	gap: 2px;
+
+	display: grid;
+	grid-template-columns: repeat(4, calc(22.5vw - 1.5px));
+	grid-template-rows: 100%;
+}
+
+button.theme {
+	background-color: #ffffffAA;
+	border: none;
+}
+.tag {
+	background-color: #ffffffAA;
+	border: none;
+}
+.tags {
+	width: 100%;
+	height: 100%;
+
+	margin-top: 2px;
+}
+
+.divGrid {
 	height: 100%;
 	width: 100%;
 
 	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: repeat(auto-fill, 10%);
-	align-items: center;
+	grid-template-columns: repeat(6, calc(15vw - 1.5px));
+	grid-template-rows: repeat(4, 15vw);
+	grid-auto-flow: row dense;
+
+	gap: 4px;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
+.project_button {
+	justify-content: center;
+	align-items: center;
 
-button {
-	height: 100%;
-
-	text-align: center;
-	font-size: 60px;
+	font-size: 2vw;
 	color: white;
-	-webkit-text-stroke: 2px black;
-	letter-spacing: 20px;
+	-webkit-text-stroke: 0.125vw black;
+	letter-spacing: 0.1vw;
 	font-weight: bolder;
 
 	-webkit-user-select: none;
@@ -31,21 +94,37 @@ button {
 	user-select: none;
 	
 	border: none;
+	overflow: hidden;
 }
+.project_label {
+	position: absolute;
 
-button:hover {
-	
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	z-index: 5;
 }
+.background_image {
+	position: absolute;
 
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
 
-#roulette {
-	background: url("../ex/roulettePreview.png");
-	background-position: center;
-	background-size: 100%;
+	filter: saturate(0) brightness(0.6);
 
+	z-index: 1;
+	scale: 1.1;
+
+	object-fit: cover;
 }
-#countdown {
-	background: url("../ex/countdownPreview.png");
-	background-position: 50% 80%;
-	background-size: 100%;
+.background_image:hover {
+	filter: saturate(0.6) brightness(1);
+	scale: 1.2;
+}
+.gradient {
+	width: 100%;
+	height: 100%;
+	z-index: 4;
 }
