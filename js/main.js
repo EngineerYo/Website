@@ -32,7 +32,7 @@ let main = function() {
 		button.style['aspect-ratio'] = `${project['size'][0]} / ${project['size'][1]}`
 		
 		button.addEventListener('click', function() {
-			window.location.href = `html/${pointer}.html`
+			window.location.href = `php/${pointer}.php`
 		})
 		
 		let img = document.createElement('img')
