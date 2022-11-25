@@ -23,7 +23,7 @@ let gaps = [
 
 let getDeltaTime = function() {
 	let startTime = new Date(2022, 10, 10, 2)
-	let endTime =	new Date(2022, 11, 2, 20)
+	let endTime =	new Date(2022, 10, 27, 22)
 	let duration = endTime - startTime
 
 	let scaleFactor = (180 * 365 * 24 * 60 * 60 * 1000) / duration
