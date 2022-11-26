@@ -144,7 +144,7 @@ div#screw {
     box-shadow:	inset 0 3px 0 rgba(0, 0, 0, 0.15);
 	overflow: hidden;
 
-	--rotation: 0deg;
+	--rotation: "0deg";
 }
 div#screw::before {
 	content: '';

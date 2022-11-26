@@ -1,6 +1,7 @@
 let init = function() {
-	$('.screw').css('--rotation', `${Math.random()*100-50}deg`)
-	// This doesn't work :(
+	$('div#screw').each(function(i) {
+		$(this).css('--rotation', `${Math.random()*180-90}deg`)
+	})
 }
 
 let main = function() {
