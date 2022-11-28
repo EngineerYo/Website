@@ -3,6 +3,7 @@ const projects = [
 	{name: 'Swing Roulette', size: [2, 2]},
 	{name: 'Bill Tracker', size: [1, 1]},
 	{name: 'List', size: [2, 1]},
+	{name: 'Stars Without Number', size: [1, 2]},
 	{name: 'Terrain Analyzer', size: [2, 2]},
 	{name: 'Projector', size: [1, 2]},
 	{name: 'Bingo', size: [1, 1]},
@@ -27,6 +28,8 @@ let main = function() {
 		button.style['grid-row'] = `span ${project['size'][1]}`
 		button.style['background-color'] = '#00000000'
 		button.style['z-index'] = '10'
+		button.style['width'] = `calc(100%)`// - ${project['size'][0]*4}px)`
+		button.style['height'] = `calc(100%)`// - ${project['size'][1]*4}px)`
 		// button.style['font-size'] = `${1.5*project['size'][0]}vw`
 		
 		button.style['aspect-ratio'] = `${project['size'][0]} / ${project['size'][1]}`
