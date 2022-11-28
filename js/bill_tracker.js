@@ -1,3 +1,12 @@
+/* 	TODO
+	Send timestamp on ajax posts
+	Get SSL set up such that I can do location requests
+	Send coordinates on ajax posts
+	Check if coordinates are near last post; ask for confirmation if they are?
+	Reverse geocode the coordinates & find a business name or address?
+	Send user on ajax posts?
+*/
+
 let init = function() {
 	$('div#screw').each(function(i) {
 		$(this).css('--rotation', `${Math.random()*180-90}deg`)
@@ -12,7 +21,7 @@ let main = function() {
 			{
 				value: 	$('.container').attr('id'),
 				stamp:	new Date().getTime()
-			}, 
+			},
 			function(in_json) {
 				let [state, stamp] = JSON.parse(in_json)
 
