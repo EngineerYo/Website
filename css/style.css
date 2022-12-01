@@ -123,7 +123,7 @@ button.theme {
 
 	object-fit: cover;
 }
-.background_image:hover {
+.project_button:hover .background_image {
 	/* filter: saturate(0.6) brightness(1); */
 	filter: brightness(1);
 	scale: 1.2;
