@@ -3,13 +3,13 @@ const projects = [
 	{name: 'Swing Roulette', size: [2, 2]},
 	{name: 'Bill Tracker', size: [1, 1]},
 	{name: 'List', size: [2, 1]},
+	{name: 'White Elephant', size: [1, 1]},
 	{name: 'Stars Without Number', size: [1, 2]},
 	{name: 'Terrain Analyzer', size: [2, 2]},
 	{name: 'Projector', size: [1, 2]},
 	{name: 'Bingo', size: [1, 1]},
 	{name: 'Q Learning', size: [1, 1]},
 	{name: 'Transit Method', size: [2, 1]},
-	{name: 'test', size: [1, 1]}
 ]
 
 let main = function() {
