@@ -63,4 +63,17 @@ let main = function() {
 	}
 }
 
+let setUUID = function() {
+	if (localStorage.getItem('UUID')) {
+		// Welcome back!
+
+		return
+	}
+
+	let time = new Date().getTime()
+	console.log(localStorage.getItem('UUID'))
+	// localStorage.setItem('name', 'Will')
+}
+
 main()
+setUUID()
